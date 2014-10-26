@@ -1,109 +1,64 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Flat -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Flat %></h1>
+</div>
 
-<p>
-  <strong>Unique:</strong>
-  <%= @flat.unique_id %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:unique_id) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.unique_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:title) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.title %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:flat_size) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.flat_size %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description_longer) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.description_longer %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:location_address) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.location_address %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:price) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.price %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:poplatky) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.poplatky %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:image_url) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.image_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:detail_url) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.detail_url %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:podlazi) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.podlazi %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:first_seen_at) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.first_seen_at %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:updated_at) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.updated_at %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:available_from) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.available_from %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:balcony) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.balcony %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:terrace) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.terrace %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:area_m) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.area_m %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:elevator) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.elevator %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:furnished) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.furnished %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:marked_as_crap_user1) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.marked_as_crap_user1 %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:marked_as_crap_user2) %></dt>
+      <dd><pre class="prettyprint"><%= @flat.marked_as_crap_user2 %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @flat.title %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              flats_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_flat_path(@flat), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              flat_path(@flat),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Flat size:</strong>
-  <%= @flat.flat_size %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @flat.description %>
-</p>
-
-<p>
-  <strong>Description longer:</strong>
-  <%= @flat.description_longer %>
-</p>
-
-<p>
-  <strong>Location address:</strong>
-  <%= @flat.location_address %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @flat.price %>
-</p>
-
-<p>
-  <strong>Poplatky:</strong>
-  <%= @flat.poplatky %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @flat.image_url %>
-</p>
-
-<p>
-  <strong>Detail url:</strong>
-  <%= @flat.detail_url %>
-</p>
-
-<p>
-  <strong>Podlazi:</strong>
-  <%= @flat.podlazi %>
-</p>
-
-<p>
-  <strong>First seen at:</strong>
-  <%= @flat.first_seen_at %>
-</p>
-
-<p>
-  <strong>Updated at:</strong>
-  <%= @flat.updated_at %>
-</p>
-
-<p>
-  <strong>Available from:</strong>
-  <%= @flat.available_from %>
-</p>
-
-<p>
-  <strong>Balcony:</strong>
-  <%= @flat.balcony %>
-</p>
-
-<p>
-  <strong>Terrace:</strong>
-  <%= @flat.terrace %>
-</p>
-
-<p>
-  <strong>Area m:</strong>
-  <%= @flat.area_m %>
-</p>
-
-<p>
-  <strong>Elevator:</strong>
-  <%= @flat.elevator %>
-</p>
-
-<p>
-  <strong>Furnished:</strong>
-  <%= @flat.furnished %>
-</p>
-
-<p>
-  <strong>Marked as crap user1:</strong>
-  <%= @flat.marked_as_crap_user1 %>
-</p>
-
-<p>
-  <strong>Marked as crap user2:</strong>
-  <%= @flat.marked_as_crap_user2 %>
-</p>
-
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>

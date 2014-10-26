@@ -1,6 +1,5 @@
-<h1>Editing flat</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @flat %> |
-<%= link_to 'Back', flats_path %>
+<%- model_class = Flat -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Flat %></h1>
+</div>
+<%= render :partial => 'form' %>
