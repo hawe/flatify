@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unique_id: MyString
+  title: MyString
+  flat_size: MyString
+  description: MyText
+  description_longer: MyText
+  location_address: MyString
+  price: MyString
+  poplatky: MyString
+  image_url: MyString
+  detail_url: MyString
+  podlazi: MyString
+  first_seen_at: 2014-10-26 12:41:10
+  updated_at: 2014-10-26 12:41:10
+  available_from: 2014-10-26 12:41:10
+  balcony: false
+  terrace: false
+  area_m: MyString
+  elevator: false
+  furnished: false
+  marked_as_crap_user1: false
+  marked_as_crap_user2: false
+
+two:
+  unique_id: MyString
+  title: MyString
+  flat_size: MyString
+  description: MyText
+  description_longer: MyText
+  location_address: MyString
+  price: MyString
+  poplatky: MyString
+  image_url: MyString
+  detail_url: MyString
+  podlazi: MyString
+  first_seen_at: 2014-10-26 12:41:10
+  updated_at: 2014-10-26 12:41:10
+  available_from: 2014-10-26 12:41:10
+  balcony: false
+  terrace: false
+  area_m: MyString
+  elevator: false
+  furnished: false
+  marked_as_crap_user1: false
+  marked_as_crap_user2: false
