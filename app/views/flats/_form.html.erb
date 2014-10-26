@@ -1,0 +1,101 @@
+<%= form_for(@flat) do |f| %>
+  <% if @flat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+
+      <ul>
+      <% @flat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :unique_id %><br>
+    <%= f.text_field :unique_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :flat_size %><br>
+    <%= f.text_field :flat_size %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :description_longer %><br>
+    <%= f.text_area :description_longer %>
+  </div>
+  <div class="field">
+    <%= f.label :location_address %><br>
+    <%= f.text_field :location_address %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :poplatky %><br>
+    <%= f.text_field :poplatky %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :detail_url %><br>
+    <%= f.text_field :detail_url %>
+  </div>
+  <div class="field">
+    <%= f.label :podlazi %><br>
+    <%= f.text_field :podlazi %>
+  </div>
+  <div class="field">
+    <%= f.label :first_seen_at %><br>
+    <%= f.datetime_select :first_seen_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :available_from %><br>
+    <%= f.datetime_select :available_from %>
+  </div>
+  <div class="field">
+    <%= f.label :balcony %><br>
+    <%= f.check_box :balcony %>
+  </div>
+  <div class="field">
+    <%= f.label :terrace %><br>
+    <%= f.check_box :terrace %>
+  </div>
+  <div class="field">
+    <%= f.label :area_m %><br>
+    <%= f.text_field :area_m %>
+  </div>
+  <div class="field">
+    <%= f.label :elevator %><br>
+    <%= f.check_box :elevator %>
+  </div>
+  <div class="field">
+    <%= f.label :furnished %><br>
+    <%= f.check_box :furnished %>
+  </div>
+  <div class="field">
+    <%= f.label :marked_as_crap_user1 %><br>
+    <%= f.check_box :marked_as_crap_user1 %>
+  </div>
+  <div class="field">
+    <%= f.label :marked_as_crap_user2 %><br>
+    <%= f.check_box :marked_as_crap_user2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

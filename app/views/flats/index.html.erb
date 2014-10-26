@@ -1,0 +1,65 @@
+<h1>Listing flats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unique</th>
+      <th>Title</th>
+      <th>Flat size</th>
+      <th>Description</th>
+      <th>Description longer</th>
+      <th>Location address</th>
+      <th>Price</th>
+      <th>Poplatky</th>
+      <th>Image url</th>
+      <th>Detail url</th>
+      <th>Podlazi</th>
+      <th>First seen at</th>
+      <th>Updated at</th>
+      <th>Available from</th>
+      <th>Balcony</th>
+      <th>Terrace</th>
+      <th>Area m</th>
+      <th>Elevator</th>
+      <th>Furnished</th>
+      <th>Marked as crap user1</th>
+      <th>Marked as crap user2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flats.each do |flat| %>
+      <tr>
+        <td><%= flat.unique_id %></td>
+        <td><%= flat.title %></td>
+        <td><%= flat.flat_size %></td>
+        <td><%= flat.description %></td>
+        <td><%= flat.description_longer %></td>
+        <td><%= flat.location_address %></td>
+        <td><%= flat.price %></td>
+        <td><%= flat.poplatky %></td>
+        <td><%= flat.image_url %></td>
+        <td><%= flat.detail_url %></td>
+        <td><%= flat.podlazi %></td>
+        <td><%= flat.first_seen_at %></td>
+        <td><%= flat.updated_at %></td>
+        <td><%= flat.available_from %></td>
+        <td><%= flat.balcony %></td>
+        <td><%= flat.terrace %></td>
+        <td><%= flat.area_m %></td>
+        <td><%= flat.elevator %></td>
+        <td><%= flat.furnished %></td>
+        <td><%= flat.marked_as_crap_user1 %></td>
+        <td><%= flat.marked_as_crap_user2 %></td>
+        <td><%= link_to 'Show', flat %></td>
+        <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
+        <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flat', new_flat_path %>
